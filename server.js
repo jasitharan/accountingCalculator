@@ -9,9 +9,8 @@ var cors = require('cors');
 
 dotenv.config({ path: './config/config.env' });
 
-app.use('*',cors({
-  origin:  'https://pensive-lichterman-d9f0b4.netlify.app',
-  
+app.use(cors({
+  credentials: true, origin: true
 }));
 
 
