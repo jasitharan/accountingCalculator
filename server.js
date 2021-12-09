@@ -8,7 +8,13 @@ var cors = require('cors');
 
 
 dotenv.config({ path: './config/config.env' });
-app.use(cors());
+
+var corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200 // For legacy browser support
+}
+
+app.use(cors(corsOptions));
 
 
 connectDB();
