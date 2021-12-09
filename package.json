@@ -1,5 +1,5 @@
 {
-  "name": "inventory-valuator-mern",
+  "name": "eoq_calculator",
   "version": "1.0.0",
   "description": "Backend for inventory valuator",
   "main": "server.js",
@@ -9,11 +9,10 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Shrikarsan",
+  "author": "Jasitharan",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
-    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.19",
