@@ -4,8 +4,12 @@ const dotenv = require('dotenv');
 const colors = require('colors');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
+var cors = require('cors');
+
 
 dotenv.config({ path: './config/config.env' });
+app.use(cors());
+
 
 connectDB();
 
