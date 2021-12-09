@@ -1,17 +1,17 @@
 const path = require('path');
+var cors = require('cors')
 const express = require('express');
 const dotenv = require('dotenv');
 const colors = require('colors');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
-var cors = require('cors');
+
+
 
 
 dotenv.config({ path: './config/config.env' });
 
-app.use(cors({
-  credentials: true, origin: true
-}));
+
 
 
 connectDB();
@@ -19,6 +19,8 @@ connectDB();
 const transactions = require('./routes/transactions');
 
 const app = express();
+
+app.options('*', cors())
 
 app.use(express.json());
 

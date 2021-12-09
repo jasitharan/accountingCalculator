@@ -2,6 +2,7 @@ import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
 import axios from 'axios';
 
+
 // Initial state
 const initialState = {
   transactions: [],
@@ -23,7 +24,7 @@ export const GlobalProvider = ({ children }) => {
   // Actions
   async function getTransactions() {
     try {
-      const res = await axios.get('/api/v1/transactions');
+      const res = await axios.get(`/api/v1/transactions`);
 
       dispatch({
         type: 'GET_TRANSACTIONS',
@@ -62,7 +63,7 @@ export const GlobalProvider = ({ children }) => {
     }
 
     try {
-      const res = await axios.post('/api/v1/transactions', transaction, config);
+      const res = await axios.post(`/api/v1/transactions', transaction, config`);
 
       dispatch({
         type: 'ADD_TRANSACTION',
