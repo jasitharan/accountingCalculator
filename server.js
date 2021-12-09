@@ -9,13 +9,10 @@ var cors = require('cors');
 
 dotenv.config({ path: './config/config.env' });
 
-var corsOptions = {
-  origin: 'https://pensive-lichterman-d9f0b4.netlify.app',
-
-  optionsSuccessStatus: 200 // For legacy browser support
-}
-
-app.use(cors(corsOptions));
+app.use('*',cors({
+  origin:  'https://pensive-lichterman-d9f0b4.netlify.app',
+  
+}));
 
 
 connectDB();
